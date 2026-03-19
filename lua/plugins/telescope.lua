@@ -16,6 +16,9 @@ return {
       map("n", "<leader>fb", builtin.buffers,     { desc = "buffers" })
       map("n", "<leader>fh", builtin.help_tags,   { desc = "help tags" })
       map("n", "<leader>fr", builtin.oldfiles,    { desc = "recent files" })
+
+      map('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+
     end,
   },
 }
