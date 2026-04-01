@@ -80,4 +80,20 @@ return {
       { "<leader>gd", "<cmd>Gdiffsplit<cr>", desc = "git diff split" },
     },
   },
+  {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewFileHistory" },
+    keys = {
+      { "<leader>go", "<cmd>DiffviewOpen<cr>",              desc = "diffview: all changes" },
+      { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>",     desc = "diffview: file history" },
+      { "<leader>gH", "<cmd>DiffviewFileHistory<cr>",       desc = "diffview: branch history" },
+      { "<leader>gx", "<cmd>DiffviewClose<cr>",             desc = "diffview: close" },
+    },
+    opts = {
+      view = {
+        default = { layout = "diff2_horizontal" },
+        merge_tool = { layout = "diff3_horizontal", disable_diagnostics = true },
+      },
+    },
+  },
 }
